@@ -32,7 +32,6 @@
             this.txt_senha = new System.Windows.Forms.TextBox();
             this.btn_entrar = new System.Windows.Forms.Button();
             this.btn_registrar = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txt_cpf
@@ -85,23 +84,12 @@
             this.btn_registrar.UseVisualStyleBackColor = false;
             this.btn_registrar.UseWaitCursor = true;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(190, 483);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
             // Tela_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp2.Properties.Resources.Capturar;
             this.ClientSize = new System.Drawing.Size(341, 561);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btn_registrar);
             this.Controls.Add(this.btn_entrar);
             this.Controls.Add(this.txt_senha);
@@ -122,7 +110,6 @@
         private System.Windows.Forms.TextBox txt_senha;
         private System.Windows.Forms.Button btn_entrar;
         private System.Windows.Forms.Button btn_registrar;
-        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

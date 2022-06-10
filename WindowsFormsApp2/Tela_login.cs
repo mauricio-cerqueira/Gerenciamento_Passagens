@@ -22,5 +22,9 @@ namespace WindowsFormsApp2
             txt_senha.UseSystemPasswordChar = true;
         }
 
+        private void Tela_login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

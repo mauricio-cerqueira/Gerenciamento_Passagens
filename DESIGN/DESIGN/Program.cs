@@ -14,6 +14,7 @@ namespace DESIGN
         [STAThread]
         static void Main()
         {
+            ConexaoBanco.Initialize();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new login_form());

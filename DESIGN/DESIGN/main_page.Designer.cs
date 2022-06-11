@@ -28,71 +28,72 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnAgendar = new System.Windows.Forms.Button();
+            this.btnViagens = new System.Windows.Forms.Button();
+            this.cbListaCidades = new System.Windows.Forms.ComboBox();
+            this.cbListaCidadesVolta = new System.Windows.Forms.ComboBox();
+            this.txtDataViagem = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // button1
+            // btnAgendar
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(39, 272);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 25);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAgendar.BackColor = System.Drawing.Color.Transparent;
+            this.btnAgendar.FlatAppearance.BorderSize = 0;
+            this.btnAgendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgendar.Location = new System.Drawing.Point(39, 272);
+            this.btnAgendar.Name = "btnAgendar";
+            this.btnAgendar.Size = new System.Drawing.Size(159, 25);
+            this.btnAgendar.TabIndex = 0;
+            this.btnAgendar.UseVisualStyleBackColor = false;
+            this.btnAgendar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnViagens
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(39, 364);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(159, 25);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnViagens.BackColor = System.Drawing.Color.Transparent;
+            this.btnViagens.FlatAppearance.BorderSize = 0;
+            this.btnViagens.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViagens.Location = new System.Drawing.Point(39, 364);
+            this.btnViagens.Name = "btnViagens";
+            this.btnViagens.Size = new System.Drawing.Size(159, 25);
+            this.btnViagens.TabIndex = 1;
+            this.btnViagens.UseVisualStyleBackColor = false;
+            this.btnViagens.Click += new System.EventHandler(this.button2_Click);
             // 
-            // comboBox1
+            // cbListaCidades
             // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.ForeColor = System.Drawing.Color.Goldenrod;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(39, 94);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(210, 23);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.Text = "PONTO DE SAIDA";
+            this.cbListaCidades.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbListaCidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbListaCidades.ForeColor = System.Drawing.Color.Goldenrod;
+            this.cbListaCidades.FormattingEnabled = true;
+            this.cbListaCidades.Location = new System.Drawing.Point(39, 94);
+            this.cbListaCidades.Name = "cbListaCidades";
+            this.cbListaCidades.Size = new System.Drawing.Size(210, 23);
+            this.cbListaCidades.TabIndex = 2;
+            this.cbListaCidades.Text = "PONTO DE SAIDA";
+            this.cbListaCidades.SelectedIndexChanged += new System.EventHandler(this.cbListaCidades_SelectedIndexChanged);
             // 
-            // comboBox2
+            // cbListaCidadesVolta
             // 
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.Goldenrod;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(39, 137);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(210, 23);
-            this.comboBox2.TabIndex = 3;
-            this.comboBox2.Text = "PONTO DE CHEGADA";
+            this.cbListaCidadesVolta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbListaCidadesVolta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbListaCidadesVolta.ForeColor = System.Drawing.Color.Goldenrod;
+            this.cbListaCidadesVolta.FormattingEnabled = true;
+            this.cbListaCidadesVolta.Location = new System.Drawing.Point(39, 137);
+            this.cbListaCidadesVolta.Name = "cbListaCidadesVolta";
+            this.cbListaCidadesVolta.Size = new System.Drawing.Size(210, 23);
+            this.cbListaCidadesVolta.TabIndex = 3;
+            this.cbListaCidadesVolta.Text = "PONTO DE CHEGADA";
             // 
-            // textBox1
+            // txtDataViagem
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Goldenrod;
-            this.textBox1.Location = new System.Drawing.Point(39, 183);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(133, 14);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "DATA DA VIAGEM";
+            this.txtDataViagem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDataViagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDataViagem.ForeColor = System.Drawing.Color.Goldenrod;
+            this.txtDataViagem.Location = new System.Drawing.Point(39, 183);
+            this.txtDataViagem.Name = "txtDataViagem";
+            this.txtDataViagem.Size = new System.Drawing.Size(133, 14);
+            this.txtDataViagem.TabIndex = 4;
+            this.txtDataViagem.Text = "DATA DA VIAGEM";
             // 
             // main_page
             // 
@@ -100,11 +101,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::DESIGN.Properties.Resources.Slide33;
             this.ClientSize = new System.Drawing.Size(304, 601);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtDataViagem);
+            this.Controls.Add(this.cbListaCidadesVolta);
+            this.Controls.Add(this.cbListaCidades);
+            this.Controls.Add(this.btnViagens);
+            this.Controls.Add(this.btnAgendar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "main_page";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -116,10 +117,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnAgendar;
+        private System.Windows.Forms.Button btnViagens;
+        private System.Windows.Forms.ComboBox cbListaCidades;
+        private System.Windows.Forms.ComboBox cbListaCidadesVolta;
+        private System.Windows.Forms.TextBox txtDataViagem;
     }
 }

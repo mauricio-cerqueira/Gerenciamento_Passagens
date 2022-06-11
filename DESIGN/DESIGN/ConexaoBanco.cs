@@ -93,5 +93,55 @@ namespace DESIGN
                 CloseConnection();
             }
         }
+
+        public static string[] ListaCidades()
+        {
+            string query = "SELECT nome FROM CIDADES";
+            string[] list = new string[CountCidades()];
+            
+            if (OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+                
+                for (int i = 0; i < list.Length; i++)
+                {
+                    if (dataReader.Read())
+                    {
+                        list[i] = dataReader[0] + "";
+                    }
+                }
+                
+                dataReader.Close();
+                
+                CloseConnection();
+                
+                return list;
+            }
+            else
+            {
+                return list;
+            }
+        }
+        public static int CountCidades()
+        {
+            string query = "SELECT Count(*) FROM CIDADES";
+            int Count = -1;
+            
+            if (OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                
+                Count = int.Parse(cmd.ExecuteScalar() + "");
+                
+                CloseConnection();
+
+                return Count;
+            }
+            else
+            {
+                return Count;
+            }
+        }
     }
 }

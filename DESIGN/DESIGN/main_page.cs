@@ -33,5 +33,17 @@ namespace DESIGN
             f6.ShowDialog();
             this.Close();
         }
+
+        private void cbListaCidades_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] list = ConexaoBanco.ListaCidades();
+            for (int i = 0; i < list.Length; i++)
+            {
+                {
+                    cbListaCidades.Items.Add(list[i]);
+
+                }
+            }
+        }
     }
 }

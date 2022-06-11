@@ -94,6 +94,27 @@ namespace DESIGN
             }
         }
 
+        public static bool Login(string cpf, string senha)
+        {
+            string querry = $"SELECT CPF FROM CLIENTES where CPF = '{cpf}' and senha = '{senha}'";
+
+            if (ConexaoBanco.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(querry, conn);
+                if (cmd.ExecuteScalar() != null)
+                {
+                    ConexaoBanco.CloseConnection();
+                    return true;
+                }
+                else
+                {
+                    ConexaoBanco.CloseConnection();
+                    return false;
+                }
+            }
+            return false;
+        }
+
         public static string[] ListaCidades()
         {
             string query = "SELECT nome FROM CIDADES";

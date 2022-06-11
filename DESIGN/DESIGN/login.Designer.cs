@@ -66,7 +66,7 @@
             // txt_cpf
             // 
             this.txt_cpf.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_cpf.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cpf.ForeColor = System.Drawing.Color.Goldenrod;
             this.txt_cpf.Location = new System.Drawing.Point(36, 278);
             this.txt_cpf.Name = "txt_cpf";
@@ -78,7 +78,7 @@
             // txt_senha
             // 
             this.txt_senha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_senha.Font = new System.Drawing.Font("Arial Rounded MT Bold", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_senha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_senha.ForeColor = System.Drawing.Color.Goldenrod;
             this.txt_senha.Location = new System.Drawing.Point(36, 320);
             this.txt_senha.Name = "txt_senha";
@@ -103,6 +103,7 @@
             this.Name = "login_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BUZZ - LOGIN";
+            this.Load += new System.EventHandler(this.login_form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

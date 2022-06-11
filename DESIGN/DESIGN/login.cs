@@ -35,10 +35,19 @@ namespace DESIGN
         // abre form principal
         private void btn_login_Click(object sender, EventArgs e)
         {
-            main_page f3 = new main_page();
-            this.Hide();
-            f3.ShowDialog();
-            this.Close();
+            if (ConexaoBanco.Login(txt_cpf.Text, txt_senha.Text) == true)
+            {
+                main_page f3 = new main_page();
+                this.Hide();
+                f3.ShowDialog();
+                this.Close();
+            }
+            
+        }
+
+        private void login_form_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -16,5 +16,13 @@ namespace DESIGN
         {
             InitializeComponent();
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            main_page f3 = new main_page();
+            this.Hide();
+            f3.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -79,6 +79,10 @@ namespace DESIGN
             }
         }
 
+        /* **********************************************
+         * INSERÇÃO DE USUARIOS
+         * *********************************************/
+
         public static void Insert_Usuario(string cpf, string nome, string sobrenome, string senha, string telefone)
         {
             string query = "INSERT INTO CLIENTES(CPF, nome, sobrenome, senha, telefone)" +
@@ -93,6 +97,10 @@ namespace DESIGN
                 CloseConnection();
             }
         }
+
+        /* **********************************************
+         * LOGIN
+         * *********************************************/
 
         public static bool Login(string cpf, string senha)
         {
@@ -115,10 +123,14 @@ namespace DESIGN
             return false;
         }
 
+        /* **********************************************
+         * LISTA DE CIDADES
+         * *********************************************/
+
         public static string[] ListaCidades()
         {
             string query = "SELECT nome FROM CIDADES";
-            string[] list = new string[CountCidades()];
+            string[] list = new string[ConexaoBanco.CountCidades()];
             
             if (OpenConnection() == true)
             {
@@ -144,8 +156,11 @@ namespace DESIGN
                 return list;
             }
         }
+
+
         public static int CountCidades()
         {
+            
             string query = "SELECT Count(*) FROM CIDADES";
             int Count = -1;
             

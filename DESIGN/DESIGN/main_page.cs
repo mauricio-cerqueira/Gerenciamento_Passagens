@@ -15,6 +15,15 @@ namespace DESIGN
         public main_page()
         {
             InitializeComponent();
+            string[] list = ConexaoBanco.ListaCidades();
+            for (int i = 0; i < list.Length; i++)
+            {
+                {
+                    cbListaCidades.Items.Add(list[i]);
+                    cbListaCidadesVolta.Items.Add(list[i]);
+                }
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,14 +45,7 @@ namespace DESIGN
 
         private void cbListaCidades_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string[] list = ConexaoBanco.ListaCidades();
-            for (int i = 0; i < list.Length; i++)
-            {
-                {
-                    cbListaCidades.Items.Add(list[i]);
-
-                }
-            }
+           
         }
     }
 }

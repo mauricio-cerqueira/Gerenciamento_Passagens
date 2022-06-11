@@ -113,6 +113,16 @@ namespace DESIGN.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Slide22 {
+            get {
+                object obj = ResourceManager.GetObject("Slide22", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Slide3 {
             get {
                 object obj = ResourceManager.GetObject("Slide3", resourceCulture);

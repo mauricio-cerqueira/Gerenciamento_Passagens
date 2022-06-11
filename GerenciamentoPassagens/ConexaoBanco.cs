@@ -79,7 +79,7 @@ namespace GerenciamentoPassagens
             }
         }
 
-        public static void Insert_Usuario(string cpf, string nome, string sobrenome, string senha, string telefone, string data)
+        public static void Insert_Usuario(string cpf, string nome, string sobrenome, string senha, string telefone)
         {
             string query = "INSERT INTO CLIENTES(CPF, nome, sobrenome, senha, telefone)" +
                 "VALUES('" + cpf + "','" + nome + "','" + sobrenome + "','" + senha + "','" + telefone + "');";

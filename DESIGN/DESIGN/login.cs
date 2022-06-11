@@ -21,7 +21,8 @@ namespace DESIGN
         {
             txt_senha.UseSystemPasswordChar = true;
         }
-
+        
+        // Abre form para registro
         private void btn_registrar_Click(object sender, EventArgs e)
         {
             registrar f2 = new registrar();
@@ -30,7 +31,8 @@ namespace DESIGN
             this.Close();
             
         }
-
+        
+        // abre form principal
         private void btn_login_Click(object sender, EventArgs e)
         {
             main_page f3 = new main_page();

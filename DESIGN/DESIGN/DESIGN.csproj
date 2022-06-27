@@ -52,6 +52,9 @@
     <Reference Include="MySql.Data, Version=8.0.29.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.29\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="MySqlConnector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d33d3e53aa5f8c92, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySqlConnector.2.1.10\lib\net461\MySqlConnector.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -61,6 +64,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.5.0.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
     <Reference Include="System.Management" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
@@ -71,6 +77,9 @@
     </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
@@ -90,58 +99,71 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="agendado.cs">
+    <Compile Include="Form\agendado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="agendado.Designer.cs">
+    <Compile Include="Form\agendado.Designer.cs">
       <DependentUpon>agendado.cs</DependentUpon>
     </Compile>
     <Compile Include="ConexaoBanco.cs" />
-    <Compile Include="confirmar.cs">
+    <Compile Include="Form\confirmar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="confirmar.Designer.cs">
+    <Compile Include="Form\confirmar.Designer.cs">
       <DependentUpon>confirmar.cs</DependentUpon>
     </Compile>
-    <Compile Include="historico.cs">
+    <Compile Include="Data\AbreBanco.cs" />
+    <Compile Include="Data\Banco.cs" />
+    <Compile Include="Data\FuncoesPassagem.cs" />
+    <Compile Include="Data\Sistema\Passageiro.cs" />
+    <Compile Include="Alerta\frmAlerta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="historico.Designer.cs">
+    <Compile Include="Alerta\frmAlerta.Designer.cs">
+      <DependentUpon>frmAlerta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\historico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\historico.Designer.cs">
       <DependentUpon>historico.cs</DependentUpon>
     </Compile>
-    <Compile Include="login.cs">
+    <Compile Include="Form\login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login.Designer.cs">
+    <Compile Include="Form\login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
-    <Compile Include="main_page.cs">
+    <Compile Include="Form\main_page.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="main_page.Designer.cs">
+    <Compile Include="Form\main_page.Designer.cs">
       <DependentUpon>main_page.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="registrar.cs">
+    <Compile Include="Form\registrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="registrar.Designer.cs">
+    <Compile Include="Form\registrar.Designer.cs">
       <DependentUpon>registrar.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="agendado.resx">
+    <EmbeddedResource Include="Form\agendado.resx">
       <DependentUpon>agendado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="confirmar.resx">
+    <EmbeddedResource Include="Form\confirmar.resx">
       <DependentUpon>confirmar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="historico.resx">
+    <EmbeddedResource Include="Alerta\frmAlerta.resx">
+      <DependentUpon>frmAlerta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\historico.resx">
       <DependentUpon>historico.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login.resx">
+    <EmbeddedResource Include="Form\login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="main_page.resx">
+    <EmbeddedResource Include="Form\main_page.resx">
       <DependentUpon>main_page.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -154,7 +176,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="registrar.resx">
+    <EmbeddedResource Include="Form\registrar.resx">
       <DependentUpon>registrar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

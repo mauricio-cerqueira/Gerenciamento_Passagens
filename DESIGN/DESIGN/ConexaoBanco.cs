@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using DESIGN.Data;
 
 namespace DESIGN
 {
@@ -23,13 +24,13 @@ namespace DESIGN
 
         public static void Initialize()
         {
-            server = "10.200.116.221";
-            database = "Gerencia_de_Passagem";
-            uid = "admin";
-            password = "senai";
+            server = "localhost";
+            database = "gerencia_passagem";
+            uid = "root";
+            password = "Amister@9958";
             string myConnectionString;
-            myConnectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+            myConnectionString = "Server=" + server + ";DATABASE=" +
+            database + ";User Id=" + uid + ";PASSWORD=" + password + ";";
 
             try
             {
@@ -42,86 +43,30 @@ namespace DESIGN
             }
         }
 
-        public static bool OpenConnection()
-        {
-            try
-            {
-                conn.Open();
-                return true;
-            }
-            catch (MySqlException ex)
-            {
-                switch (ex.Number)
-                {
-                    case 0:
-                        MessageBox.Show("Cannot connect to server.  Contact administrator");
-                        break;
+        ///* **********************************************
+        // * LOGIN
+        // * *********************************************/
 
-                    case 1045:
-                        MessageBox.Show("Invalid username/password, please try again");
-                        break;
-                }
-                return false;
-            }
-        }
+        //public static bool Login(string cpf, string senha)
+        //{
+        //    string query = $"SELECT CPF FROM CLIENTES where CPF = '{cpf}' and senha = '{senha}'";
 
-        public static bool CloseConnection()
-        {
-            try
-            {
-                conn.Close();
-                return true;
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-                return false;
-            }
-        }
-
-        /* **********************************************
-         * INSERÇÃO DE USUARIOS
-         * *********************************************/
-
-        public static void Insert_Usuario(string cpf, string nome, string sobrenome, string senha, string telefone)
-        {
-            string query = "INSERT INTO CLIENTES(CPF, nome, sobrenome, senha, telefone)" +
-                "VALUES('" + cpf + "','" + nome + "','" + sobrenome + "','" + senha + "','" + telefone + "');";
-
-            if (OpenConnection() == true)
-            {
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-
-                cmd.ExecuteNonQuery();
-
-                CloseConnection();
-            }
-        }
-
-        /* **********************************************
-         * LOGIN
-         * *********************************************/
-
-        public static bool Login(string cpf, string senha)
-        {
-            string querry = $"SELECT CPF FROM CLIENTES where CPF = '{cpf}' and senha = '{senha}'";
-
-            if (ConexaoBanco.OpenConnection() == true)
-            {
-                MySqlCommand cmd = new MySqlCommand(querry, conn);
-                if (cmd.ExecuteScalar() != null)
-                {
-                    ConexaoBanco.CloseConnection();
-                    return true;
-                }
-                else
-                {
-                    ConexaoBanco.CloseConnection();
-                    return false;
-                }
-            }
-            return false;
-        }
+        //    if (ConexaoBanco.OpenConnection() == true)
+        //    {
+        //        MySqlCommand cmd = new MySqlCommand(query, conn);
+        //        if (cmd.ExecuteScalar() != null)
+        //        {
+        //            ConexaoBanco.CloseConnection();
+        //            return true;
+        //        }
+        //        else
+        //        {
+        //            ConexaoBanco.CloseConnection();
+        //            return false;
+        //        }
+        //    }
+        //    return false;
+        //}
 
         /* **********************************************
          * LISTA DE CIDADES
